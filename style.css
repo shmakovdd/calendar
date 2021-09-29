@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;  
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.dates {
+  display: flex;
+  margin-bottom: 20px;
+  width: 340px;
+  justify-content: space-around;
+}
+
+.date-input {
+  width: 100px;
+  height: 25px;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calendar__month_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.calendar { 
+  width: 320px;
+  height: 369px;
+  left: 170px;
+  top: 330px;
+  padding: 19px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+}
+
+.calendar__arrow-left, .calendar__arrow-right {
+  color: #BC9CFF;
+  cursor: pointer;
+}
+
+.calendar__weekdays {
+  color: #BC9CFF;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.calendar__weekday, .calendar__day {
+  width: calc(100% / 7);
+  text-align: center
+}
+
+.calendar__days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar__day {
+  width: 39.88px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.other-month {
+  opacity: .5;
+}
+
+.range-from, .range-to {
+  position: relative;
+  z-index: 111;
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.range-from:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left:50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: .5;
+  z-index: -1;
+}
+
+.range-to:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right:50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: .5;
+  z-index: -1;
+}
+
+
+.calendar__day:hover {
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: 1;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.calendar__day.is-in-range:hover {
+  border-radius: 0;
+  opacity: .5;
+}
+
+.is-in-range {
+  position: relative;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: .5;
+}
+
+.selected, .focused {
+  z-index: 111;
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.today{
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); 
+  color: white;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.today.is-in-range {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 0;
+  opacity: .5;
+}

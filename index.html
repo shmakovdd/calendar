@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="dates">
+            <input type="text" placeholder=" дд.мм.гггг" class="first-date date-input" readonly>
+            <input type="text" placeholder=" дд.мм.гггг" class="second-date date-input" readonly>
+        </div>
+
+        <div class="calendar">
+            <div class="calendar__month_wrapper">
+                <span class="material-icons calendar__arrow-left">
+                    arrow_back
+                </span>
+                <h3 class="calendar__month"> Август 2019</h3>
+                <span class="material-icons calendar__arrow-right">
+                    arrow_forward
+                </span>
+            </div>
+            <ul class="calendar__weekdays">
+                <li class="calendar__weekday">Пн</li>
+                <li class="calendar__weekday">Вт</li>
+                <li class="calendar__weekday">Ср</li>
+                <li class="calendar__weekday">Чт</li>
+                <li class="calendar__weekday">Пт</li>
+                <li class="calendar__weekday">Сб</li>
+                <li class="calendar__weekday">Вс</li>
+            </ul>
+            <ul class="calendar__days">
+            </ul>
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
